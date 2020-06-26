@@ -1,0 +1,23 @@
+<!doctype html>
+<head>
+	<title>kabali</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+
+<body>
+	<div>
+		
+		<p>please enter your name</p>
+		<form method="POST" action="/">
+			Name:<br>
+			<input type="text" name="username"><br>
+			<button type="submit" value="submit">submit</button>
+		 </form>
+
+	</div>
+	<div>
+		{% if name %}
+		<p>hello {{name}} ! you are great</p>
+		{% endif %}
+	</div>
+</body>
